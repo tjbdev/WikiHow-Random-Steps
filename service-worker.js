@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/WikiHow-Random-Steps/precache-manifest.dd2858f2bb10fc06bed6f20078803ae4.js"
+  "/WikiHow-Random-Steps/precache-manifest.3b0b5c30e41e6eec19f79ad29ab42a86.js"
 );
 
 self.addEventListener('message', (event) => {
