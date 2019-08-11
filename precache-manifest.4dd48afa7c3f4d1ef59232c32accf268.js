@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "417ebf7d40e1455ff3cbcb69a72c2ceb",
+    "revision": "a2d110391878753f8b37ef607adb0460",
     "url": "/WikiHow-Random-Steps/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/WikiHow-Random-Steps/static/css/2.31dafeb2.chunk.css"
   },
   {
-    "revision": "ded4b0bc8ce9287dcc86",
+    "revision": "eeeb03be740b3ffd08e5",
     "url": "/WikiHow-Random-Steps/static/css/main.c4703150.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/WikiHow-Random-Steps/static/js/2.3ac3a3e4.chunk.js"
   },
   {
-    "revision": "ded4b0bc8ce9287dcc86",
-    "url": "/WikiHow-Random-Steps/static/js/main.017fe9c1.chunk.js"
+    "revision": "eeeb03be740b3ffd08e5",
+    "url": "/WikiHow-Random-Steps/static/js/main.39d686e1.chunk.js"
   },
   {
     "revision": "861c7a83ea962f321d31",
