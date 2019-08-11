@@ -1,7 +1,9 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Title from '../components/Title/Title';
 import StepList from '../components/StepList/StepList';
+import Footer from '../components/Footer/Footer';
 
 import nounsObj from './nouns.js';
 import verbsObj from './verbs.js';
@@ -11,6 +13,13 @@ const verbs = verbsObj.verbs;
 const connectors = ["for the","for your", "an", "your new", "a new", "the", "at the","your", "your mother's", "your father's", "your teacher's", "your crush's", "your brother's", "your sister's", "your son's", "your daughter's", "your boss's", "your dog's", "your cat's", "your", "your", "your", "your", "your", "your", "the", "the", "the", "the", "the", "the", "the"];
 
 const unirest = require("unirest");
+
+const Container = styled.div`
+	display:flex;
+	flex-direction: column;
+	min-height: 100vh;
+	position:relative;
+`;
 
 export default class App extends React.Component {
 
@@ -24,11 +33,12 @@ export default class App extends React.Component {
 		}
 		this.newVerbNoun = this.newVerbNoun.bind(this);
 		this.fetchSteps = this.fetchSteps.bind(this);
+		this.updateInfo = this.updateInfo.bind(this);
 	}
 
 	fetchSteps(){
 		const req = unirest("GET", "https://hargrimm-wikihow-v1.p.rapidapi.com/steps");
-		const count = Math.floor(Math.random()*6 +1);
+		const count = Math.floor(Math.random()*8 +1);
 		req.query({
 			"count": count
 		});
@@ -49,20 +59,25 @@ export default class App extends React.Component {
 		this.setState({connectorIndex: Math.floor(Math.random()*connectors.length)});
 	}
 
-	componentWillMount(){
+	updateInfo(event){
+		this.setState({steps: {}});
 		this.newVerbNoun();
 		this.fetchSteps();
-
 	}
+
+	componentWillMount(){
+		this.updateInfo();
+	}
+
 
 	render() {
 		const { nounIndex, verbIndex, connectorIndex, steps} = this.state;
-
 		return (
-			<div>
-				<Title verb={verbs[verbIndex]} connector={connectors[connectorIndex]} noun={nouns[nounIndex]}/>
+			<Container>
+				<Title updateInfo={this.updateInfo} verb={verbs[verbIndex]} connector={connectors[connectorIndex]} noun={nouns[nounIndex]}/>
 				<StepList steps={steps} duration={0.3} delay={0.8}/>
-			</div>
+				<Footer className="self-end"/>
+			</Container>
 		);
 	}
 }

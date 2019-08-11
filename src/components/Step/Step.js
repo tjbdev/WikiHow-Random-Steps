@@ -40,7 +40,7 @@ const HiddenSpan = styled.span`
 const Step = (props) => {
   return (
   	<FadeInUp duration={props.duration} delay={props.delay}>
-	    <Container className="shadow-1 flex items-center">
+	    <Container className="shadow-1 flex items-center grow">
 	    	<Number>{props.number}</Number>
 	    	<Description>{props.description}
 	    		<HiddenSpan className="hidden"><a target="_blank" href={"http://www.google.com/search?q="+props.description.replace(" ", "+")}>Click to google</a></HiddenSpan>

@@ -2,7 +2,7 @@ import React from 'react';
 import Step from '../Step/Step';
 
 const style = {
-	marginBottom: "3%"
+	marginBottom: "4%"
 }
 
 const StepList = ({steps,duration,delay}) => {
@@ -18,7 +18,7 @@ const StepList = ({steps,duration,delay}) => {
     			);
     		})
     	}
-
+    	<br style={{borderBottom:"1px solid"}}/>
     </div>
   );
 }
