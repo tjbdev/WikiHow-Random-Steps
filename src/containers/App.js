@@ -74,9 +74,13 @@ export default class App extends React.Component {
 		const { nounIndex, verbIndex, connectorIndex, steps} = this.state;
 		return (
 			<Container>
-				<Title updateInfo={this.updateInfo} verb={verbs[verbIndex]} connector={connectors[connectorIndex]} noun={nouns[nounIndex]}/>
-				<StepList steps={steps} duration={0.3} delay={0.8}/>
-				<Footer className="self-end"/>
+				<div style={{marginBottom: "5em"}}>
+					<Title updateInfo={this.updateInfo} verb={verbs[verbIndex]} connector={connectors[connectorIndex]} noun={nouns[nounIndex]}/>
+					<StepList steps={steps} duration={0.3} delay={0.8}/>
+				</div>
+				<div>
+					<Footer className="self-end"/>
+				</div>
 			</Container>
 		);
 	}

@@ -20,9 +20,9 @@ export default class Title extends React.Component {
 				<div className="flex justify-center" style={howToStyle}>
 					<h1 className="di mt0 mb0">How to...</h1>
 				</div>
-				<div onClick={ e => this.props.updateInfo(e)} className=" shadow-3 flex justify-center content-center tc" style={vnStyle}>
+				<div className="shadow-3 flex justify-center content-center tc" style={vnStyle}>
 					<FadeIn duration={0.5}>
-						<h1 className="mt0 mb0 ttc pb3">{this.props.verb} {this.props.connector} {this.props.noun} </h1>
+						<h1  onClick={ e => this.props.updateInfo(e)} className="mt0 mb0 ttc pb3 grow" style={{cursor: "pointer"}}>{this.props.verb} {this.props.connector} {this.props.noun} </h1>
 					</FadeIn>
 				</div>
 			</div>
